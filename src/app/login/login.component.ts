@@ -43,10 +43,10 @@ export class LoginComponent implements OnInit, OnDestroy {
 
   public submit() {
     if (this.form.valid) {
-      this.authenticationService.login(this.form.controls["username"].value, this.form.controls["password"].value).subscribe(
-        (r) => this.router.navigateByUrl(this.returnUrl).then(r => this.snackBar.open(`Login successful!`, undefined, { duration: 5000 })),
-        (err) => this.snackBar.open(`Login failed due to error: ${err?.error?.description}!`, undefined, { duration: 5000 })
-      );
+      this.authenticationService.login(this.form.controls["username"].value, this.form.controls["password"].value).subscribe({
+      next: (r) => this.router.navigateByUrl(this.returnUrl).then(r => this.snackBar.open(`Login successful!`, undefined, {duration: 5000})),
+          error: (err) => this.snackBar.open(`Login failed due to error: ${err?.error?.description}!`, undefined, {duration: 5000})
+    });
     }
   }
 }
