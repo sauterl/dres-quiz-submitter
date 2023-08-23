@@ -1,0 +1,10 @@
+<div style="padding: 1rem; background-color: lightgray" class="mat-typography">
+  <mat-grid-list [cols]="(nbCols | async) || 2" rowHeight="2:1" [gutterSize]="gutter">
+    <mat-grid-tile *ngFor="let b of buttons">
+      <button mat-flat-button [color]="b.button" style="width: 60%; height: 60%;" (click)="submit(b.value)">
+        <span class="{{typographyCls}}">{{b.label}}</span>
+      </button>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
+

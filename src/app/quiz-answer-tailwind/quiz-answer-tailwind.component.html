@@ -1,0 +1,5 @@
+<div class="container mx-auto w-full p-4">
+  <div class="grid grid-cols-2 gap-4">
+    <button *ngFor="let b of buttons" class="bg-{{b.colour}}-600 rounded-2xl w-full" (click)="submit(b.value)"><span class="text-4xl">{{b.label}}</span></button>
+  </div>
+</div>

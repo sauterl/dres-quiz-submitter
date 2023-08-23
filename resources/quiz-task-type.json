@@ -1,0 +1,24 @@
+{
+ "name": "Textual Known Item Search",
+ "duration": "60",
+ "targetOption": "TEXT",
+ "hintOptions": [
+  "TEXT",
+  "EXTERNAL_IMAGE"
+ ],
+ "scoreOption": "KIS",
+ "submissionOptions": [
+  "NO_DUPLICATES",
+  "LIMIT_CORRECT_PER_TEAM",
+  "TEXTUAL_SUBMISSION"
+ ],
+ "taskOptions": [
+  "HIDDEN_RESULTS"
+ ],
+ "configuration": {
+  "LIMIT_CORRECT_PER_TEAM.limit": "1",
+  "KIS.maxPointsPerTask": "190",
+  "KIS.maxPointsAtTaskEnd": "10",
+  "KIS.penaltyPerWrongSubmission": "200"
+ }
+}
